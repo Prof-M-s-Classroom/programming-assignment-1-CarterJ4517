@@ -6,7 +6,7 @@ class Distance:
     """
     def __init__(self, distance):
         """Initialize the Distance object with distance and timestamp."""
-        self.distance = distance # get distance from user
+        self.distance = distance # get distance as provided
         self.time = datetime.datetime.now().timestamp() # get timestamp
 
     def __str__(self):

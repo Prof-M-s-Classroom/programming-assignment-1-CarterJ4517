@@ -42,3 +42,7 @@ print(stack.pop().data)
 stack.print_stack()
 
 print(stack.is_empty())
+
+stack.push(1)
+stack.print_stack()
+print(stack.is_empty())
