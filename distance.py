@@ -6,9 +6,9 @@ class Distance:
     """
     def __init__(self, distance):
         """Initialize the Distance object with distance and timestamp."""
-        self.distance = distance
-        self.time = datetime.datetime.now().timestamp()
+        self.distance = distance # get distance from user
+        self.time = datetime.datetime.now().timestamp() # get timestamp
 
     def __str__(self):
         """Return a formatted string representation of the Distance object."""
-        return f"Distance of {self.distance} taken at {self.time}"
+        return f"Distance of {self.distance} taken at {self.time}" # return formatted string

@@ -2,7 +2,7 @@ import serial
 import time
 
 # Replace 'COM3' with the correct port for your system
-arduino_port = 'COM3'
+arduino_port = 'COM6'
 baud_rate = 9600
 
 try:
@@ -12,11 +12,11 @@ try:
     print("Connected to Arduino. Reading Ultrasonic Sensor data...")
 
     while True:
-        if arduino.in_waiting > 0:
+        if arduino.in_waiting > 0: # check if data is available
             distance = arduino.readline().decode('utf-8').strip()
             if distance:
                 print(f"Distance: {distance} cm")
-        time.sleep(2)  # Read every 2 seconds
+        time.sleep(1)  # Read every 2 seconds
 
 except KeyboardInterrupt:
     print("Exiting...")
